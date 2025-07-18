@@ -13,30 +13,12 @@ A powerful Python-based search tool that allows you to search for specific words
 - **Real-time Logging**: See search progress and directory traversal in real-time
 - **Threading Support**: Non-blocking GUI with progress indicators
 
-
-## 📁 File Structure
-
-```
-content-search-tool/
-├── search-content.py      # Core search functions and CLI interface
-├── search_gui.py          # GUI interface
-├── README.md             # This documentation
-├── requirements.txt      # Python dependencies
-└── examples/             # Example files for testing (optional)
-    ├── sample.py
-    ├── sample.md
-    ├── sample.pdf
-    └── sample.docx
-```
-
-
 ## 🛠️ Installation
 
 ### Prerequisites
 
 - Python 3.7 or higher
 - pip (Python package installer)
-
 
 ### Install Dependencies
 
@@ -49,7 +31,6 @@ Or using requirements file:
 ```bash
 pip install -r requirements.txt
 ```
-
 
 ### Download Files
 
@@ -87,7 +68,6 @@ Full file: tutorial.ipynb | Directory: ./notebooks
 Full file: research.pdf | Directory: ./docs
 ```
 
-
 ### Graphical User Interface (GUI)
 
 ```bash
@@ -104,16 +84,15 @@ python search_gui.py
 - **Logs Area**: Real-time search progress
 - **Results Area**: Formatted search results
 
-
 ## 📋 Supported File Formats
 
-| Format | Extensions | Description |
-| :-- | :-- | :-- |
-| **Python Scripts** | `.py` | Plain text search through Python code |
-| **Markdown** | `.md` | Plain text search through Markdown documents |
-| **Jupyter Notebooks** | `.ipynb` | Searches both code and markdown cells |
-| **Word Documents** | `.doc`, `.docx` | Extracts text from paragraphs and tables |
-| **PDF Documents** | `.pdf` | Extracts text from all pages |
+| Format                | Extensions      | Description                                  |
+| :-------------------- | :-------------- | :------------------------------------------- |
+| **Python Scripts**    | `.py`           | Plain text search through Python code        |
+| **Markdown**          | `.md`           | Plain text search through Markdown documents |
+| **Jupyter Notebooks** | `.ipynb`        | Searches both code and markdown cells        |
+| **Word Documents**    | `.doc`, `.docx` | Extracts text from paragraphs and tables     |
+| **PDF Documents**     | `.pdf`          | Extracts text from all pages                 |
 
 ## ⚙️ Configuration
 
@@ -135,7 +114,6 @@ excluded_folders = {
 }
 ```
 
-
 ### Customizing Excluded Folders
 
 Edit the `excluded_folders` set in the `search_files_for_term` function:
@@ -146,7 +124,6 @@ excluded_folders.add("my_custom_folder")
 excluded_folders.add("temp_files")
 ```
 
-
 ## 🔍 Search Examples
 
 ### Basic Word Search
@@ -156,14 +133,12 @@ Search term: "python"
 Result: Finds "python", "Python", "PYTHON" (case-insensitive)
 ```
 
-
 ### Phrase Search
 
 ```
 Search term: "machine learning algorithm"
 Result: Finds exact phrase in documents
 ```
-
 
 ### Concatenated Word Search
 
@@ -172,14 +147,12 @@ Search term: "residual"
 Result: Finds "residual", "residualNetwork", "ResidualBlock"
 ```
 
-
 ### Case-Sensitive Search
 
 ```
 Search term: "API" (case-sensitive: yes)
 Result: Finds "API" but not "api" or "Api"
 ```
-
 
 ## 🐛 Troubleshooting
 
@@ -196,7 +169,6 @@ ImportError: No module named 'docx'
 ```bash
 pip install python-docx
 ```
-
 
 #### 2. **PDF Processing Warnings**
 
@@ -236,7 +208,6 @@ Full file: script.py | Directory: ./scripts
 Full file: notes.md | Directory: ./docs
 ```
 
-
 ### GUI Output
 
 ```
@@ -252,12 +223,12 @@ Full file: notes.md | Directory: ./docs
     🔗 ./scripts/script.py
 ```
 
-
 ## 🤝 Contributing
 
 ### Adding New File Formats
 
 1. **Create search function:**
+
 ```python
 def search_in_new_format(file_path, search_term, case_sensitive=False):
     # Your implementation here
@@ -265,13 +236,13 @@ def search_in_new_format(file_path, search_term, case_sensitive=False):
 ```
 
 2. **Add to extensions dictionary:**
+
 ```python
 extensions = {
     # ... existing formats
     ".new": search_in_new_format,
 }
 ```
-
 
 ### Reporting Issues
 
@@ -281,7 +252,6 @@ Please report issues with:
 - Operating system
 - Error messages
 - Steps to reproduce
-
 
 ## 📄 License
 
@@ -293,7 +263,6 @@ This project is open source. Feel free to modify and distribute according to you
 - **v1.1.0**: Added GUI interface
 - **v1.2.0**: Added PDF support with pdfplumber
 - **v1.3.0**: Separated CLI and GUI into different files
-
 
 ## 📞 Support
 
@@ -318,4 +287,3 @@ Planned features:
 - [ ] API endpoint
 
 **Happy Searching! 🔍**
-
